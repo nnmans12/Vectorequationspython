@@ -1,2 +1,175 @@
-# VectorEquationPlots
-Vector Equations &amp; Plots
+# Mathematical Functions Using Python
+
+import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+
+
+t = np.linspace(1, 4, 500)
+
+o = ((4*np.pi*t))
+r = (22 - np.cos(((4*o))))/17
+a = t/t
+
+
+lamda = 1
+
+
+
+def cylindrical_vector_equation(r, o, a):
+    """
+    Defines a vector function in 3D space.
+
+    Args:
+        r: Radius function.
+        o: Angle function.
+        a: Height function.
+
+    Returns:
+        None.
+    """
+    
+    
+    #r = np.sqrt(r**2)
+    #o = np.sqrt(o**2)
+    #a = np.sqrt((t/t)**2)
+
+    
+    x = 10*r*np.cos(o)
+    y = 10*r*np.sin(o)
+    x1 = np.sqrt((r*np.cos(o))**2)
+    y1 = np.sqrt((r*np.sin(o))**2)
+    z = a
+
+    fig = plt.figure()
+    ax = fig.add_subplot(111, projection='3d')
+    
+    
+    # Iterate over the indices of the array, not the array itself.
+    #for i in range(len(t)): 
+    #    radius = np.sqrt(int(x[i])**2 + int(y[i])**2)
+    #    print(radius)
+    #    z += 1
+        
+    ax.plot(x, y, a, "o")
+    plt.show()     
+    
+    z=a
+    
+    fig1 = plt.figure()
+    ax = fig1.add_subplot(111, projection='3d')  # Create an Axes3D object
+    
+    ax.plot(x, y, z, "o")
+    ax.plot(x, y, 2*z, "o")  # Plot the original data points as well
+    ax.plot(x, y, 3*z, "o")  # Plot the original data points as well
+    ax.plot(x, y, 4*z, "o")  # Plot the original data points as well
+    ax.plot(x, y, 5*z, "o")  # Plot the original data points as well
+    ax.plot(x, y, 6*z, "o")  # Plot the original data points as well
+    ax.plot(x, y, 7*z, "o")  # Plot the original data points as well
+    ax.plot(x, y, 8*z, "o")  # Plot the original data points as well
+    ax.plot(x, y, 9*z, "o")  # Plot the original data points as well
+    ax.plot(x, y, 10*z, "o")  # Plot the original data points as well
+    ax.plot(x, y, 11*z, "o")  # Plot the original data points as well
+    plt.show()
+    
+    # Save the data to a text file
+    data = np.stack((x, y, z), axis=-1)
+    #data = data.reshape(-1, 3)  # Reshape to a 2D array
+    np.savetxt('cylindrical vector equation data.txt', data)
+
+    #Load the data from the text file
+    data = np.loadtxt('cylindrical vector equation data.txt')
+    x1, y1, z1 = data[:, 0], data[:, 1], data[:, 2]    
+    
+    x1 = x[0:10]             #iteration length of 10 for less curvature of the subsurfaces
+    y1 = y[0:10]
+    z1 = z[0:10]
+
+    s=20
+
+    x2 = x[0:10*s]
+    y2 = y[0:10*s]
+    z2 = z[0:10*s]
+    
+    x3 = x[2*s:3*s]
+    y3 = y[2*s:3*s]
+    z3 = z[2*s:3*s]
+
+    x4 = x[3*s:4*s]
+    y4 = y[3*s:4*s]
+    z4 = z[3*s:4*s]
+
+    x5 = x[4*s:5*s]
+    y5 = y[4*s:5*s]
+    z5 = z[4*s:5*s]
+
+    x6 = x[5*s:6*s]
+    y6 = y[5*s:6*s]
+    z6 = z[5*s:6*s]
+
+    x7 = x[6*s:7*s]
+    y7 = y[6*s:7*s]
+    z7 = z[6*s:7*s]
+
+    #fig2 = plt.figure()
+    #ax = fig2.add_subplot(111, projection='3d')
+    #ax.plot_surface(x1, y1, z1, rstride=1, cstride=1, cmap='viridis')
+
+
+
+    fig2 = plt.figure()
+    ax = fig2.add_subplot(111)
+    ax.plot(x2, y2)
+    ax.plot(x2, y2, "o") 
+    plt.show()
+    fig3 = plt.figure()
+    ax = fig3.add_subplot(111)
+    ax.plot(x3, y3)
+    ax.plot(x3, y3, "o") 
+    ax.set_title('X Y Data points for fixed height')
+    plt.show()
+    fig4 = plt.figure()
+    ax = fig4.add_subplot(111)
+    ax.plot(x4, y4)
+    ax.plot(x4, y4, "o") 
+    ax.set_title('X Y Data points for fixed height')
+    plt.show()
+    fig5 = plt.figure()
+    ax = fig5.add_subplot(111)
+    ax.plot(x5, y5)
+    ax.plot(x5, y5, "o") 
+    ax.set_title('X Y Data points for fixed height')
+    plt.show()
+    fig6 = plt.figure()
+    ax = fig6.add_subplot(111)
+    ax.plot(x6, y6)
+    ax.plot(x6, y6, "o") 
+    ax.set_title('X Y Data points for fixed height')
+    plt.show()
+    fig7 = plt.figure()
+    ax = fig7.add_subplot(111)
+    ax.plot(x7, y7)
+    ax.plot(x7, y7, "o") 
+    ax.set_title('X Y Data points for fixed height')
+    plt.show()
+  
+    # Set labels
+    #ax.set_xlabel('x')
+    #ax.set_ylabel('y')
+    #ax.set_zlabel('z')
+
+    # Display the plot
+    plt.show()
+
+
+    
+    plt.show()
+    
+ 
+    
+    
+    return
+
+
+cylindrical_vector_equation(r, o, a)  
+
