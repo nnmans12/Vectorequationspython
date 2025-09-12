@@ -1,4 +1,4 @@
 A volume integral is a precise summation of the space with in a surface using the integration method of a defined function. 
 This is done by using the sum of infinitesimal cubic volumes dxdydz to achieve precise volumes for larger non linear closed surfaces that are integrable. 
 A surface which contains discontinuities can be integrated by splitting the surface into more than one equation. 
-Approximation methods such as the Taylor series can be used for surfaces that can’t be defined by an equation, a Taylor series approximates a function with a polynomial equation to an nth exponent. 
+Approximation methods such as the Taylor series can be used for surfaces that can’t be integrated easily, a Taylor series approximates a function with a polynomial equation to an nth exponent. 
