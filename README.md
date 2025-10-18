@@ -1,4 +1,4 @@
-# Mathematical Functions Using Python
+# Mathematical Functions For Python
 
 
     
