@@ -1,5 +1,0 @@
-# Mathematical Functions For Python
-
-
-    
-    
